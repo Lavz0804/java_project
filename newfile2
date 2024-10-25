@@ -1,0 +1,11 @@
+def jobs = [:]                                                                        
+ for(int i=1;i<=5;i++)
+ {
+    def component = i
+    jobs[component] = 
+    {   
+      sleep(i)
+      echo "Waiting for ${i} seconds"                                     
+    }
+ }
+ parallel jobs
